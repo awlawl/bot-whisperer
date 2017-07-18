@@ -35,11 +35,11 @@ docker-compose up
 
 Any issues connecting to AWS will be logged to the console.
 
-#Notes
+# Notes
 1. Browser security requires that microphone access is only allowed to sites hosted on localhost or on an https endpoint. Otherwise you can't use the microphone button.
 2. IOS and Safari is not supported yet. It is possible that those browsers don't fully support the components of the browser media api yet. (getUserMedia)
 
-#Contributions and licenses
+# Contributions and licenses
 This software is licensed under the MIT license.
 
 This software uses [Recorderjs](https://github.com/mattdiamond/Recorderjs) under the MIT license.
