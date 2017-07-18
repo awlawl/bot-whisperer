@@ -1,0 +1,133 @@
+a {
+    color: inherit;
+}
+
+body {
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.currently_recording {
+    color: red;
+}
+
+.record_fa {
+    font-size: 8.2em;
+}
+
+.background-image {
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    display: block;
+    filter: blur(50px);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+}
+
+
+.pulse {
+    animation: 1000ms pulse_animation infinite ease-in-out;
+    -webkit-animation: 1000ms pulse_animation infinite ease-in-out;
+}
+
+@keyframes pulse_animation {
+    from {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@-webkit-keyframes pulse_animation {
+    from {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+#bottomPanel {
+    border-top: 1px solid #999999;
+    position: fixed;
+    width: 75%;
+    z-index: 1000;
+    height: 500px;
+    font-size: 18px;
+    color: #000;
+    background: #FFF;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: -475px;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.panel-up {
+    bottom: 0px !important;
+}
+
+.panel-down {
+    bottom: -475px !important;
+}
+
+#debugConsole {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: stretch;
+    min-width: 0;
+    min-height: auto;
+    overflow: scroll;
+    text-align: left;
+}
+
+#panelHeader {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+    min-width: 0;
+    min-height: auto;
+    cursor: pointer;
+}
+
+.debugRow {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#main_container{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.flex-child {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#botName {
+  font-size: 1.5em;
+}
+
+.red_mic {
+  color: red;
+}

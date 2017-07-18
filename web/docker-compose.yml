@@ -1,0 +1,9 @@
+version: "2"
+services:
+  bot-whisperer:
+    build: .
+    image: awlawl/bot-whisperer:0.9.0
+    ports:
+      - "80:9090"
+    env_file:
+      - .env

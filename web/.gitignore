@@ -1,0 +1,11 @@
+node_modules/
+recordings
+yarn.lock
+.vs
+local.sh
+ffmpeg.exe
+*.wave
+.env
+DS_Store
+.DS_Store
+npm-debug.log

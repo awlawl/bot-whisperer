@@ -1,0 +1,4 @@
+node_modules/
+Dockerfile
+public/recordings/*.mp3
+public/recordings/*.wav

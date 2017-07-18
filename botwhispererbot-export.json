@@ -1,0 +1,261 @@
+{
+  "name": "BotWhispererBot",
+  "description": null,
+  "intents": [
+    {
+      "intentName": "Help",
+      "intentVersion": "1"
+    },
+    {
+      "intentName": "WidgetExample",
+      "intentVersion": "2"
+    },
+    {
+      "intentName": "Purpose",
+      "intentVersion": "3"
+    },
+    {
+      "intentName": "DebugPanel",
+      "intentVersion": "3"
+    },
+    {
+      "intentName": "DoorExample",
+      "intentVersion": "1"
+    },
+    {
+      "intentName": "Hello",
+      "intentVersion": "1"
+    },
+    {
+      "intentName": "DeployExample",
+      "intentVersion": "4"
+    }
+  ],
+  "clarificationPrompt": {
+    "messages": [
+      {
+        "contentType": "PlainText",
+        "content": "Sorry, I didn't understand. You can ask me for help."
+      }
+    ],
+    "maxAttempts": 5,
+    "responseCard": null
+  },
+  "abortStatement": {
+    "messages": [
+      {
+        "contentType": "PlainText",
+        "content": "Sorry, I could not understand. Goodbye."
+      }
+    ],
+    "responseCard": null
+  },
+  "status": "READY",
+  "failureReason": null,
+  "lastUpdatedDate": "2017-07-18T12:36:18.198Z",
+  "createdDate": "2017-06-29T00:52:51.891Z",
+  "idleSessionTTLInSeconds": 300,
+  "voiceId": "Salli",
+  "checksum": "e09dd9bf-5d82-4ece-975f-8a7c1bd6629a",
+  "version": "$LATEST",
+  "locale": "en-US",
+  "childDirected": false,
+  "dependencies": {
+    "intents": [
+      {
+        "name": "Purpose",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "What can you do",
+          "What is this bot",
+          "What can you do for me",
+          "What are you"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-purpose",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-06-29T02:21:52.233Z",
+        "createdDate": "2017-06-29T02:21:52.233Z",
+        "version": "3",
+        "checksum": "9043850d-f6e8-4906-b8d0-1792c2474e3d"
+      },
+      {
+        "name": "DoorExample",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "Please unlock the door",
+          "Please unlock the door hal"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-door",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T04:42:14.418Z",
+        "createdDate": "2017-07-18T04:42:14.418Z",
+        "version": "1",
+        "checksum": "32916e4d-8a41-40e7-957d-770b2f71aa60"
+      },
+      {
+        "name": "WidgetExample",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "How many widgets were created today",
+          "How many widgets were made today",
+          "How many widgets"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-widgets",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T03:46:18.029Z",
+        "createdDate": "2017-07-18T03:46:18.029Z",
+        "version": "2",
+        "checksum": "5156211e-016a-414b-bda9-82f6284d8021"
+      },
+      {
+        "name": "DebugPanel",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "Tell me about the debug panel",
+          "What is the debug panel",
+          "how about that debug panel",
+          "debug panel"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-debuglog",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T12:35:48.232Z",
+        "createdDate": "2017-07-18T12:35:48.232Z",
+        "version": "3",
+        "checksum": "c0824c2f-f302-4936-aee1-ec317a3b0a4a"
+      },
+      {
+        "name": "DeployExample",
+        "description": null,
+        "slots": [
+          {
+            "name": "Build",
+            "description": null,
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.NUMBER",
+            "slotTypeVersion": null,
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What build number?"
+                }
+              ],
+              "maxAttempts": 2,
+              "responseCard": null
+            },
+            "priority": 1,
+            "sampleUtterances": [],
+            "responseCard": null
+          }
+        ],
+        "sampleUtterances": [
+          "Deploy to production",
+          "Deploy version {Build} to production"
+        ],
+        "confirmationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Are you sure you want to deploy {Build} to production?"
+            }
+          ],
+          "maxAttempts": 3,
+          "responseCard": null
+        },
+        "rejectionStatement": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Ok never mind then."
+            }
+          ],
+          "responseCard": null
+        },
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-deploy",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T04:23:43.538Z",
+        "createdDate": "2017-07-18T04:23:43.538Z",
+        "version": "4",
+        "checksum": "0da3b585-de6a-4ab5-85ed-92876d3ca2ec"
+      },
+      {
+        "name": "Hello",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "Hello",
+          "Hi",
+          "Whats up",
+          "Um",
+          "Yo",
+          "Hola"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-hello",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-06-29T01:15:45.522Z",
+        "createdDate": "2017-06-29T01:15:45.522Z",
+        "version": "1",
+        "checksum": "f52b4f43-4f7c-47f3-8b72-4ea64601035e"
+      },
+      {
+        "name": "Help",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-hello",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": "AMAZON.HelpIntent",
+        "lastUpdatedDate": "2017-06-29T01:05:55.467Z",
+        "createdDate": "2017-06-29T01:05:55.467Z",
+        "version": "1",
+        "checksum": "e1b03a32-d667-45e9-847e-8d64e46967fc"
+      }
+    ],
+    "slotTypes": []
+  }
+}
