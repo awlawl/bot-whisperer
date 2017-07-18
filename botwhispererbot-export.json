@@ -16,7 +16,7 @@
     },
     {
       "intentName": "DebugPanel",
-      "intentVersion": "3"
+      "intentVersion": "4"
     },
     {
       "intentName": "DoorExample",
@@ -52,104 +52,33 @@
   },
   "status": "READY",
   "failureReason": null,
-  "lastUpdatedDate": "2017-07-18T12:36:18.198Z",
+  "lastUpdatedDate": "2017-07-18T22:18:49.959Z",
   "createdDate": "2017-06-29T00:52:51.891Z",
   "idleSessionTTLInSeconds": 300,
   "voiceId": "Salli",
-  "checksum": "e09dd9bf-5d82-4ece-975f-8a7c1bd6629a",
+  "checksum": "d9580e52-37c8-47e1-a042-7d583d35e81b",
   "version": "$LATEST",
   "locale": "en-US",
   "childDirected": false,
   "dependencies": {
     "intents": [
       {
-        "name": "Purpose",
+        "name": "Help",
         "description": null,
         "slots": [],
-        "sampleUtterances": [
-          "What can you do",
-          "What is this bot",
-          "What can you do for me",
-          "What are you"
-        ],
+        "sampleUtterances": [],
         "fulfillmentActivity": {
           "type": "CodeHook",
           "codeHook": {
-            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-purpose",
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-hello",
             "messageVersion": "1.0"
           }
         },
-        "parentIntentSignature": null,
-        "lastUpdatedDate": "2017-06-29T02:21:52.233Z",
-        "createdDate": "2017-06-29T02:21:52.233Z",
-        "version": "3",
-        "checksum": "9043850d-f6e8-4906-b8d0-1792c2474e3d"
-      },
-      {
-        "name": "DoorExample",
-        "description": null,
-        "slots": [],
-        "sampleUtterances": [
-          "Please unlock the door",
-          "Please unlock the door hal"
-        ],
-        "fulfillmentActivity": {
-          "type": "CodeHook",
-          "codeHook": {
-            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-door",
-            "messageVersion": "1.0"
-          }
-        },
-        "parentIntentSignature": null,
-        "lastUpdatedDate": "2017-07-18T04:42:14.418Z",
-        "createdDate": "2017-07-18T04:42:14.418Z",
+        "parentIntentSignature": "AMAZON.HelpIntent",
+        "lastUpdatedDate": "2017-06-29T01:05:55.467Z",
+        "createdDate": "2017-06-29T01:05:55.467Z",
         "version": "1",
-        "checksum": "32916e4d-8a41-40e7-957d-770b2f71aa60"
-      },
-      {
-        "name": "WidgetExample",
-        "description": null,
-        "slots": [],
-        "sampleUtterances": [
-          "How many widgets were created today",
-          "How many widgets were made today",
-          "How many widgets"
-        ],
-        "fulfillmentActivity": {
-          "type": "CodeHook",
-          "codeHook": {
-            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-widgets",
-            "messageVersion": "1.0"
-          }
-        },
-        "parentIntentSignature": null,
-        "lastUpdatedDate": "2017-07-18T03:46:18.029Z",
-        "createdDate": "2017-07-18T03:46:18.029Z",
-        "version": "2",
-        "checksum": "5156211e-016a-414b-bda9-82f6284d8021"
-      },
-      {
-        "name": "DebugPanel",
-        "description": null,
-        "slots": [],
-        "sampleUtterances": [
-          "Tell me about the debug panel",
-          "What is the debug panel",
-          "how about that debug panel",
-          "debug panel"
-        ],
-        "fulfillmentActivity": {
-          "type": "CodeHook",
-          "codeHook": {
-            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-debuglog",
-            "messageVersion": "1.0"
-          }
-        },
-        "parentIntentSignature": null,
-        "lastUpdatedDate": "2017-07-18T12:35:48.232Z",
-        "createdDate": "2017-07-18T12:35:48.232Z",
-        "version": "3",
-        "checksum": "c0824c2f-f302-4936-aee1-ec317a3b0a4a"
+        "checksum": "e1b03a32-d667-45e9-847e-8d64e46967fc"
       },
       {
         "name": "DeployExample",
@@ -213,6 +142,73 @@
         "checksum": "0da3b585-de6a-4ab5-85ed-92876d3ca2ec"
       },
       {
+        "name": "Purpose",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "What can you do",
+          "What is this bot",
+          "What can you do for me",
+          "What are you"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-purpose",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-06-29T02:21:52.233Z",
+        "createdDate": "2017-06-29T02:21:52.233Z",
+        "version": "3",
+        "checksum": "9043850d-f6e8-4906-b8d0-1792c2474e3d"
+      },
+      {
+        "name": "DoorExample",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "Please unlock the door",
+          "Please unlock the door hal"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-door",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T04:42:14.418Z",
+        "createdDate": "2017-07-18T04:42:14.418Z",
+        "version": "1",
+        "checksum": "32916e4d-8a41-40e7-957d-770b2f71aa60"
+      },
+      {
+        "name": "DebugPanel",
+        "description": null,
+        "slots": [],
+        "sampleUtterances": [
+          "Tell me about the debug panel",
+          "What is the debug panel",
+          "how about that debug panel",
+          "debug panel"
+        ],
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-debugpanel",
+            "messageVersion": "1.0"
+          }
+        },
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T22:18:28.638Z",
+        "createdDate": "2017-07-18T22:18:28.638Z",
+        "version": "4",
+        "checksum": "21af8481-af28-4d45-97fa-b4e7e2222ea7"
+      },
+      {
         "name": "Hello",
         "description": null,
         "slots": [],
@@ -238,22 +234,26 @@
         "checksum": "f52b4f43-4f7c-47f3-8b72-4ea64601035e"
       },
       {
-        "name": "Help",
+        "name": "WidgetExample",
         "description": null,
         "slots": [],
-        "sampleUtterances": [],
+        "sampleUtterances": [
+          "How many widgets were created today",
+          "How many widgets were made today",
+          "How many widgets"
+        ],
         "fulfillmentActivity": {
           "type": "CodeHook",
           "codeHook": {
-            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-hello",
+            "uri": "arn:aws:lambda:us-east-1:007376538521:function:bot-whisperer-lambda-dev-widgets",
             "messageVersion": "1.0"
           }
         },
-        "parentIntentSignature": "AMAZON.HelpIntent",
-        "lastUpdatedDate": "2017-06-29T01:05:55.467Z",
-        "createdDate": "2017-06-29T01:05:55.467Z",
-        "version": "1",
-        "checksum": "e1b03a32-d667-45e9-847e-8d64e46967fc"
+        "parentIntentSignature": null,
+        "lastUpdatedDate": "2017-07-18T03:46:18.029Z",
+        "createdDate": "2017-07-18T03:46:18.029Z",
+        "version": "2",
+        "checksum": "5156211e-016a-414b-bda9-82f6284d8021"
       }
     ],
     "slotTypes": []
