@@ -11,9 +11,9 @@ version: "2"
 services:
   bot-whisperer:
     build: .
-    image: awlregistry.azurecr.io/bot-whisperer:0.1.8
+    image: awlawl/bot-whisperer:0.9.0
     ports:
-      - "80:9090"
+      - "9090:9090"
     env_file:
       - .env
 ```
@@ -25,6 +25,7 @@ AWS_ACCESS_KEY_ID=XXXXX
 AWS_SECRET_ACCESS_KEY=XXXXX
 AWS_BOT_ALIAS=$LATEST
 AWS_BOT_NAME=XXXX
+AWS_REGION=us-east-1
 ```
 
 4. Now you can run this command to start the Bot Whisper web application on port 9090
@@ -34,11 +35,11 @@ docker-compose up
 
 Any issues connecting to AWS will be logged to the console.
 
-#Notes
+# Notes
 1. Browser security requires that microphone access is only allowed to sites hosted on localhost or on an https endpoint. Otherwise you can't use the microphone button.
 2. IOS and Safari is not supported yet. It is possible that those browsers don't fully support the components of the browser media api yet. (getUserMedia)
 
-#Contributions and licenses
+# Contributions and licenses
 This software is licensed under the MIT license.
 
 This software uses [Recorderjs](https://github.com/mattdiamond/Recorderjs) under the MIT license.
